@@ -8,58 +8,72 @@ public class Competitor {
     private String category;
 
     public String getCategory() {
+
         return category;
     }
 
     public void setCategory(String category) {
+
         this.category = category;
     }
 
     public int getCompetitorNumber() {
+
         return competitorNumber;
     }
 
     public void setCompetitorNumber(int competitorNumber) {
+
         this.competitorNumber = competitorNumber;
     }
 
     public String getGetCompetitorName() {
+
         return CompetitorName;
     }
 
     public void setGetCompetitorName(String getCompetitorName) {
+
         this.CompetitorName = getCompetitorName;
     }
 
     public String getCountry() {
+
         return country;
     }
 
     public void setCountry(String country) {
+
         this.country = country;
     }
 
     public String getLevel() {
+
         return level;
     }
 
     public void setLevel(String level) {
+
         this.level = level;
     }
 
     public int getAge() {
+
         return age;
     }
 
     public void setAge(int age) {
+
         this.age = age;
     }
 
     public int[] getScores() {
+
         return scores;
     }
 
     public void setScores(int[] scores) {
+
         this.scores = scores;
     }
 
@@ -83,6 +97,6 @@ public class Competitor {
     }
 
     public String getShortDetails() {
-        return "CN " + competitorNumber + " (" + getInitials() + ") has overall score " + overallScore + ".";
+        return "CN " + competitorNumber + " (" + getInitials() + ") has overall score " + OverallScore + ".";
     }
 }
