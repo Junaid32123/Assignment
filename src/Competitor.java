@@ -7,6 +7,13 @@ public class Competitor {
     private int age;
     private int[] scores;
     private String category;
+    private String gender;
+    public String getGender() {
+        return gender;
+    }
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
 
     public String getCategory() {
 
@@ -78,14 +85,13 @@ public class Competitor {
         this.scores = scores;
     }
 
-    public Competitor(int competitorNumber, String competitorName, String country, String level, int age, int[] scores, String category) {
+    public Competitor(int competitorNumber, String firstName, String lastName,String gender, int age, String country, int[] scores) {
         this.competitorNumber = competitorNumber;
-        this.competitorName = competitorName;
-        this.country = country;
-        this.level = level;
+        this.competitorName = firstName + " " + lastName;
+        this.gender = gender;
         this.age = age;
+        this.country = country;
         this.scores = scores;
-        this.category = category;
     }
 
     public int[] getScoreArray() {
@@ -107,7 +113,7 @@ public class Competitor {
         String allScores = Arrays.toString(scores).replace("[", "").replace("]", "");
         double overallScore = getOverallScore();
         String details = "Competitor Number " + competitorNumber + ", Name: " + competitorName + ", Country: " + country + ".\n";
-        details += competitorName + " is a " + level + " aged " + age + " and received these scores: " + allScores + ".\n";
+        details += competitorName + " is a " + gender + " aged " + age + " and received these scores: " + allScores + ".\n";
         details += "This gives them an overall score of " + overallScore + ".";
         return details;
     }
@@ -128,4 +134,3 @@ public class Competitor {
         return initials.toString();
     }
 }
-

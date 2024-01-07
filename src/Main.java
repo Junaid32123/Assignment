@@ -1,42 +1,79 @@
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.Scanner;
+
+
+
 public class Main {
-
     public static void main(String[] args) {
-        // Create Competitor objects
-        int[] scores1 = {5, 4, 5, 4, 3};
-        Competitor competitor1 = new Competitor(100, "Keith John Talbot", "UK", "Novice", 21, scores1, "Some Category");
+        Manager manager = new Manager();
+        String filePath = "src/RunCompetitor.csv"; // Replace this with the path to your CSV file
 
-        int[] scores2 = {4, 3, 5, 2, 4};
-        Competitor competitor2 = new Competitor(101, "Emily Parker", "USA", "Intermediate", 25, scores2, "Another Category");
+        ArrayList<Competitor> competitors = manager.readCompetitorData(filePath);
 
-        // Test methods for competitor1
-        System.out.println("Competitor 1 Full Details:");
-        System.out.println(competitor1.getFullDetails());
-        System.out.println("\nCompetitor 1 Short Details:");
-        System.out.println(competitor1.getShortDetails());
+        CompetitorList competitorList = new CompetitorList();
+        competitorList.getCompetitors().addAll(competitors);
 
-        // Test methods for competitor2
-        System.out.println("\nCompetitor 2 Full Details:");
-        System.out.println(competitor2.getFullDetails());
-        System.out.println("\nCompetitor 2 Short Details:");
-        System.out.println(competitor2.getShortDetails());
+        String outputFilePath = "src/competitors_report.txt"; // Replace with your desired file name
 
-        // Testing getScoreArray method
-        System.out.println("\nCompetitor 1 Scores:");
-        int[] scoresOfCompetitor1 = competitor1.getScoreArray();
-        for (int score : scoresOfCompetitor1) {
-            System.out.print(score + " ");
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputFilePath))) {
+            writer.write("Final Report:\n\n");
+
+            // Table of competitors with full details
+            writer.write("Table of Competitors with Full Details:\n");
+            competitorList.displayCompetitorsDetailsToFile(writer);
+
+            // Details of the competitor with the highest overall score
+            writer.write("\nCompetitor with the highest overall score:\n");
+            Competitor highestScorer = competitorList.getCompetitorWithHighestScore();
+            if (highestScorer != null) {
+                writer.write(highestScorer.getFullDetails() + "\n");
+            } else {
+                writer.write("No competitors found.\n");
+            }
+
+            // Summary statistics
+            writer.write("\nSummary Statistics:\n");
+            SummaryStatistics summaryStats = competitorList.calculateSummaryStatistics();
+            writer.write("Total Overall Score: " + summaryStats.getTotalOverallScore() + "\n");
+            writer.write("Average Overall Score: " + summaryStats.getAverageOverallScore() + "\n");
+            writer.write("Minimum Overall Score: " + summaryStats.getMinOverallScore() + "\n");
+            writer.write("Maximum Overall Score: " + summaryStats.getMaxOverallScore() + "\n");
+
+            // Frequency report for individual scores
+            writer.write("\nFrequency Report for Individual Scores:\n");
+            Map<Integer, Integer> scoreFrequency = competitorList.generateScoreFrequencyReport();
+            for (Map.Entry<Integer, Integer> entry : scoreFrequency.entrySet()) {
+                writer.write("Score " + entry.getKey() + ": " + entry.getValue() + " times\n");
+            }
+
+            Scanner scanner = new Scanner(System.in);
+            System.out.print("Enter competitor number to view details: ");
+            int inputCompetitorNumber = scanner.nextInt();
+
+            Competitor selectedCompetitor = findCompetitorByNumber(competitors, inputCompetitorNumber);
+            if (selectedCompetitor != null) {
+                writer.write("\nShort Details for Competitor " + inputCompetitorNumber + ":\n");
+                writer.write(selectedCompetitor.getShortDetails() + "\n");
+            } else {
+                writer.write("\nCompetitor " + inputCompetitorNumber + " not found.\n");
+            }
+
+
+            System.out.println("Final Report written to: " + outputFilePath);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        System.out.println();
-
-        System.out.println("\nCompetitor 2 Scores:");
-        int[] scoresOfCompetitor2 = competitor2.getScoreArray();
-        for (int score : scoresOfCompetitor2) {
-            System.out.print(score + " ");
+    }
+    private static Competitor findCompetitorByNumber(ArrayList<Competitor> competitors, int competitorNumber) {
+        for (Competitor competitor : competitors) {
+            if (competitor.getCompetitorNumber() == competitorNumber) {
+                return competitor;
+            }
         }
-        System.out.println();
-
-        // Testing getOverallScore method
-        System.out.println("\nCompetitor 1 Overall Score: " + competitor1.getOverallScore());
-        System.out.println("Competitor 2 Overall Score: " + competitor2.getOverallScore());
+        return null;
     }
 }
