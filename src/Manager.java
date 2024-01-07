@@ -4,6 +4,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class Manager {
+    public static void main(String[] args) {
+        CompetitorGUI competitorGUI = new CompetitorGUI();
+    }
     public ArrayList<Competitor> readCompetitorData(String filePath) {
         ArrayList<Competitor> competitors = new ArrayList<>();
 
