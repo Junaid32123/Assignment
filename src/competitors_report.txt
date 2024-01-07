@@ -1,0 +1,109 @@
+Final Report:
+
+Table of Competitors with Full Details:
+Competitor Number 100, Name: Ann Sthen, Country: UK.
+Ann Sthen is a Female aged 23 and received these scores: 5, 2, 1, 9.
+This gives them an overall score of 4.25.
+--------------------------------------------
+Competitor Number 101, Name: George Beth, Country: UK.
+George Beth is a Male aged 31 and received these scores: 2, 6, 5, 5.
+This gives them an overall score of 4.5.
+--------------------------------------------
+Competitor Number 102, Name: Kaith Andy, Country: UK.
+Kaith Andy is a Female aged 29 and received these scores: 4, 7, 2, 2.
+This gives them an overall score of 3.75.
+--------------------------------------------
+Competitor Number 103, Name: Rinon Grov, Country: US.
+Rinon Grov is a Male aged 25 and received these scores: 1, 1, 5, 7.
+This gives them an overall score of 3.5.
+--------------------------------------------
+Competitor Number 104, Name: Mark Do, Country: UK.
+Mark Do is a Male aged 22 and received these scores: 5, 7, 4, 2.
+This gives them an overall score of 4.5.
+--------------------------------------------
+Competitor Number 105, Name: Harry Patrick, Country: UK.
+Harry Patrick is a Male aged 32 and received these scores: 2, 6, 5, 8.
+This gives them an overall score of 5.25.
+--------------------------------------------
+Competitor Number 106, Name: Vicy Mathew, Country: UK.
+Vicy Mathew is a Male aged 33 and received these scores: 6, 2, 9, 5.
+This gives them an overall score of 5.5.
+--------------------------------------------
+Competitor Number 107, Name: Monica Loy, Country: US.
+Monica Loy is a Female aged 29 and received these scores: 4, 4, 8, 2.
+This gives them an overall score of 4.5.
+--------------------------------------------
+Competitor Number 108, Name: Susan Mathew, Country: US.
+Susan Mathew is a Female aged 28 and received these scores: 5, 6, 5, 3.
+This gives them an overall score of 4.75.
+--------------------------------------------
+Competitor Number 109, Name: Andy Stov, Country: US.
+Andy Stov is a Female aged 22 and received these scores: 6, 2, 9, 6.
+This gives them an overall score of 5.75.
+--------------------------------------------
+Competitor Number 110, Name: Mary Francis, Country: UK.
+Mary Francis is a Male aged 27 and received these scores: 7, 9, 6, 6.
+This gives them an overall score of 7.0.
+--------------------------------------------
+Competitor Number 111, Name: Jomon Vicy, Country: UK.
+Jomon Vicy is a Male aged 22 and received these scores: 6, 9, 10, 9.
+This gives them an overall score of 8.5.
+--------------------------------------------
+Competitor Number 112, Name: Catherin George, Country: UAE.
+Catherin George is a Male aged 20 and received these scores: 1, 4, 4, 2.
+This gives them an overall score of 2.75.
+--------------------------------------------
+Competitor Number 113, Name: Aby Mathew, Country: UK.
+Aby Mathew is a Male aged 34 and received these scores: 2, 3, 6, 5.
+This gives them an overall score of 4.0.
+--------------------------------------------
+Competitor Number 114, Name: Jojo Mony, Country: UK.
+Jojo Mony is a Male aged 31 and received these scores: 2, 3, 6, 7.
+This gives them an overall score of 4.5.
+--------------------------------------------
+Competitor Number 115, Name: Methen George, Country: UK.
+Methen George is a Male aged 30 and received these scores: 4, 7, 7, 8.
+This gives them an overall score of 6.5.
+--------------------------------------------
+Competitor Number 116, Name: Scarlett John, Country: UK.
+Scarlett John is a Female aged 25 and received these scores: 3, 4, 6, 5.
+This gives them an overall score of 4.5.
+--------------------------------------------
+Competitor Number 117, Name: Patrick Shanon, Country: US.
+Patrick Shanon is a Male aged 22 and received these scores: 4, 9, 9, 10.
+This gives them an overall score of 8.0.
+--------------------------------------------
+Competitor Number 118, Name: Rod Stod, Country: UK.
+Rod Stod is a Male aged 26 and received these scores: 5, 9, 2, 4.
+This gives them an overall score of 5.0.
+--------------------------------------------
+Competitor Number 119, Name: Lijo Willams, Country: UK.
+Lijo Willams is a Male aged 28 and received these scores: 6, 2, 5, 8.
+This gives them an overall score of 5.25.
+--------------------------------------------
+
+Competitor with the highest overall score:
+Competitor Number 111, Name: Jomon Vicy, Country: UK.
+Jomon Vicy is a Male aged 22 and received these scores: 6, 9, 10, 9.
+This gives them an overall score of 8.5.
+
+Summary Statistics:
+Total Overall Score: 102.25
+Average Overall Score: 5.1125
+Minimum Overall Score: 2.75
+Maximum Overall Score: 8.5
+
+Frequency Report for Individual Scores:
+Score 1: 4 times
+Score 2: 14 times
+Score 3: 4 times
+Score 4: 10 times
+Score 5: 13 times
+Score 6: 13 times
+Score 7: 7 times
+Score 8: 4 times
+Score 9: 9 times
+Score 10: 2 times
+
+Short Details for Competitor 119:
+CN 119 (LW) has overall score 5.25.
