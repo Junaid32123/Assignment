@@ -14,11 +14,13 @@ import java.util.Comparator;
 
 public class CompetitorGUI extends JFrame {
     private Manager manager;
-    private ArrayList<Competitor> competitors;
+    private CompetitorList competitors;
 
     public CompetitorGUI() {
         manager = new Manager();
-        competitors = manager.readCompetitorData("src/RunCompetitor.csv");
+        competitors = CompetitorList.from_array(manager.readCompetitorData("src/DancerCompetitor.csv", "Dancer"));
+        competitors.addAll(manager.readCompetitorData("src/IceSkaterCompetitor.csv", "Ice"));
+
 
         setTitle("Competitor Management System");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -122,7 +124,7 @@ public class CompetitorGUI extends JFrame {
         ArrayList<Competitor> sortedByOverallScore = new ArrayList<>(competitors);
 
         // Sorting the copies based on different criteria
-        Collections.sort(sortedByName, Comparator.comparing(Competitor::getCompetitorName));
+        Collections.sort(sortedByName, Comparator.comparing(Competitor::getCompetitorName, String.CASE_INSENSITIVE_ORDER));
         Collections.sort(sortedByOverallScore, Comparator.comparing(Competitor::getOverallScore).reversed());
 
         // Table to display sorted data
@@ -323,26 +325,25 @@ public class CompetitorGUI extends JFrame {
         return panel;
     }
 
-    private Competitor findCompetitorByNumber(ArrayList<Competitor> competitors, int competitorNumber) {
-        for (Competitor competitor : competitors) {
-            if (competitor.getCompetitorNumber() == competitorNumber) {
-                return competitor;
-            }
-        }
-        return null;
+    private Competitor findCompetitorByNumber(CompetitorList competitors, int competitorNumber) {
+        return competitors.by_id(competitorNumber);
     }
 
 
     private void writeCompetitorReport(String filePath) {
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(filePath));
-            writer.write(String.format("%-20s %-20s %-20s %-20s%n", "Competitor Number", "Name", "Country", "Overall Score"));
+            writer.write(String.format("%-20s %-20s %-20s %-20s %s%n", "Competitor Number", "Name", "Country", "Overall Score", "Extra Information"));
             for (Competitor competitor : competitors) {
-                String competitorData = String.format("%-20d %-20s %-20s %-20.2f%n",
+                String competitorData = String.format("%-20d %-20s %-20s %-20.2f %s%n",
                         competitor.getCompetitorNumber(),
                         competitor.getCompetitorName(),
                         competitor.getCountry(),
-                        competitor.getOverallScore());
+                        competitor.getOverallScore(),
+                        competitor instanceof IceSkaterCompetitor ? String.format("Skating Style: %s | Skill Level: %s", ((IceSkaterCompetitor) competitor).getSkatingStyle(), ((IceSkaterCompetitor) competitor).getSkillLevel()) : (
+                                competitor instanceof DancerCompetitor ? String.format("Dance Style: %s | Years of Experience: %s", ((DancerCompetitor) competitor).getDanceStyle(), ((DancerCompetitor) competitor).getExperienceYears()) : ""
+                        )
+                );
                 writer.write(competitorData);
             }
             writer.close();

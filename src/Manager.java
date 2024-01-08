@@ -7,7 +7,10 @@ public class Manager {
     public static void main(String[] args) {
         CompetitorGUI competitorGUI = new CompetitorGUI();
     }
-    public ArrayList<Competitor> readCompetitorData(String filePath) {
+
+
+    public ArrayList<Competitor> readCompetitorData(String filePath, String classType) {
+
         ArrayList<Competitor> competitors = new ArrayList<>();
 
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
@@ -33,6 +36,7 @@ public class Manager {
                     String gender = data[3];
                     String country = data[4];
 
+
                     // Validate age range
                     if (age < 0 || age > 150) {
                         System.err.println("Error in line " + lineNumber + ": Invalid age");
@@ -46,9 +50,9 @@ public class Manager {
                     }
 
                     // Validate score range
-                    int[] scores = new int[data.length - 5];
+                    int[] scores = new int[data.length - 7];
                     for (int i = 0; i < scores.length; i++) {
-                        scores[i] = Integer.parseInt(data[i + 5]);
+                        scores[i] = Integer.parseInt(data[i + 7]);
                         if (scores[i] < 0 || scores[i] > 100) {
                             System.err.println("Error in line " + lineNumber + ": Invalid score");
                             continue;
@@ -56,8 +60,19 @@ public class Manager {
                     }
 
                     // Creating a Competitor object and adding it to the list
-                    Competitor competitor = new Competitor(competitorNumber, firstName, lastName, gender, age, country, scores);
+                    Competitor competitor;
+                    if (classType.equals("Ice")) {
+                        String skatingStyle = data[5];
+                        int skillLevel = Integer.parseInt(data[6]);
+                        competitor = new IceSkaterCompetitor(competitorNumber, firstName, lastName, country, gender, age, scores, skatingStyle, skillLevel);
+                    } else {
+                        String danceStyle = data[5];
+                        int experienceYears = Integer.parseInt(data[6]);
+                        competitor = new DancerCompetitor(competitorNumber, firstName, lastName, country, gender, age, scores, danceStyle, experienceYears);
+                    }
+
                     competitors.add(competitor);
+
                 } catch (NumberFormatException | ArrayIndexOutOfBoundsException e) {
                     System.err.println("Error in line " + lineNumber + ": Incorrect format");
                 }

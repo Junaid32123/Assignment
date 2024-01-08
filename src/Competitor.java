@@ -1,5 +1,5 @@
 import java.util.Arrays;
-public class Competitor {
+public abstract class Competitor {
     private int competitorNumber;
     private String competitorName;
     private String country;
@@ -85,6 +85,10 @@ public class Competitor {
         this.scores = scores;
     }
 
+    public int getTotalScore(){
+        return Arrays.stream(this.scores).reduce(0, Integer::sum);
+    }
+
     public Competitor(int competitorNumber, String firstName, String lastName,String gender, int age, String country, int[] scores) {
         this.competitorNumber = competitorNumber;
         this.competitorName = firstName + " " + lastName;
@@ -94,38 +98,15 @@ public class Competitor {
         this.scores = scores;
     }
 
-    public int[] getScoreArray() {
+    public abstract double getOverallScore();
 
-        return scores;
-    }
+    public abstract String getFullDetails();
 
-    public double getOverallScore() {
-        double overallScore = 0;
-        int total = 0;
-        for (int score : scores) {
-            total += score;
-        }
-        overallScore = (double) total / scores.length;
-        return overallScore;
-    }
+    public abstract String getShortDetails();
 
-    public String getFullDetails() {
-        String allScores = Arrays.toString(scores).replace("[", "").replace("]", "");
-        double overallScore = getOverallScore();
-        String details = "Competitor Number " + competitorNumber + ", Name: " + competitorName + ", Country: " + country + ".\n";
-        details += competitorName + " is a " + gender + " aged " + age + " and received these scores: " + allScores + ".\n";
-        details += "This gives them an overall score of " + overallScore + ".";
-        return details;
-    }
-
-    public String getShortDetails() {
-        double overallScore = getOverallScore();
-        return "CN " + competitorNumber + " (" + getInitials() + ") has overall score " + overallScore + ".";
-    }
-
-    private String getInitials() {
+    public String getInitials() {
         StringBuilder initials = new StringBuilder();
-        String[] nameParts = competitorName.split(" ");
+        String[] nameParts = getCompetitorName().split(" ");
         for (String part : nameParts) {
             if (!part.isEmpty()) {
                 initials.append(part.charAt(0));
@@ -133,4 +114,5 @@ public class Competitor {
         }
         return initials.toString();
     }
+
 }

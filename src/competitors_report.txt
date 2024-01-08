@@ -1,109 +1,41 @@
-Final Report:
-
-Table of Competitors with Full Details:
-Competitor Number 100, Name: Ann Sthen, Country: UK.
-Ann Sthen is a Female aged 23 and received these scores: 5, 2, 1, 9.
-This gives them an overall score of 4.25.
---------------------------------------------
-Competitor Number 101, Name: George Beth, Country: UK.
-George Beth is a Male aged 31 and received these scores: 2, 6, 5, 5.
-This gives them an overall score of 4.5.
---------------------------------------------
-Competitor Number 102, Name: Kaith Andy, Country: UK.
-Kaith Andy is a Female aged 29 and received these scores: 4, 7, 2, 2.
-This gives them an overall score of 3.75.
---------------------------------------------
-Competitor Number 103, Name: Rinon Grov, Country: US.
-Rinon Grov is a Male aged 25 and received these scores: 1, 1, 5, 7.
-This gives them an overall score of 3.5.
---------------------------------------------
-Competitor Number 104, Name: Mark Do, Country: UK.
-Mark Do is a Male aged 22 and received these scores: 5, 7, 4, 2.
-This gives them an overall score of 4.5.
---------------------------------------------
-Competitor Number 105, Name: Harry Patrick, Country: UK.
-Harry Patrick is a Male aged 32 and received these scores: 2, 6, 5, 8.
-This gives them an overall score of 5.25.
---------------------------------------------
-Competitor Number 106, Name: Vicy Mathew, Country: UK.
-Vicy Mathew is a Male aged 33 and received these scores: 6, 2, 9, 5.
-This gives them an overall score of 5.5.
---------------------------------------------
-Competitor Number 107, Name: Monica Loy, Country: US.
-Monica Loy is a Female aged 29 and received these scores: 4, 4, 8, 2.
-This gives them an overall score of 4.5.
---------------------------------------------
-Competitor Number 108, Name: Susan Mathew, Country: US.
-Susan Mathew is a Female aged 28 and received these scores: 5, 6, 5, 3.
-This gives them an overall score of 4.75.
---------------------------------------------
-Competitor Number 109, Name: Andy Stov, Country: US.
-Andy Stov is a Female aged 22 and received these scores: 6, 2, 9, 6.
-This gives them an overall score of 5.75.
---------------------------------------------
-Competitor Number 110, Name: Mary Francis, Country: UK.
-Mary Francis is a Male aged 27 and received these scores: 7, 9, 6, 6.
-This gives them an overall score of 7.0.
---------------------------------------------
-Competitor Number 111, Name: Jomon Vicy, Country: UK.
-Jomon Vicy is a Male aged 22 and received these scores: 6, 9, 10, 9.
-This gives them an overall score of 8.5.
---------------------------------------------
-Competitor Number 112, Name: Catherin George, Country: UAE.
-Catherin George is a Male aged 20 and received these scores: 1, 4, 4, 2.
-This gives them an overall score of 2.75.
---------------------------------------------
-Competitor Number 113, Name: Aby Mathew, Country: UK.
-Aby Mathew is a Male aged 34 and received these scores: 2, 3, 6, 5.
-This gives them an overall score of 4.0.
---------------------------------------------
-Competitor Number 114, Name: Jojo Mony, Country: UK.
-Jojo Mony is a Male aged 31 and received these scores: 2, 3, 6, 7.
-This gives them an overall score of 4.5.
---------------------------------------------
-Competitor Number 115, Name: Methen George, Country: UK.
-Methen George is a Male aged 30 and received these scores: 4, 7, 7, 8.
-This gives them an overall score of 6.5.
---------------------------------------------
-Competitor Number 116, Name: Scarlett John, Country: UK.
-Scarlett John is a Female aged 25 and received these scores: 3, 4, 6, 5.
-This gives them an overall score of 4.5.
---------------------------------------------
-Competitor Number 117, Name: Patrick Shanon, Country: US.
-Patrick Shanon is a Male aged 22 and received these scores: 4, 9, 9, 10.
-This gives them an overall score of 8.0.
---------------------------------------------
-Competitor Number 118, Name: Rod Stod, Country: UK.
-Rod Stod is a Male aged 26 and received these scores: 5, 9, 2, 4.
-This gives them an overall score of 5.0.
---------------------------------------------
-Competitor Number 119, Name: Lijo Willams, Country: UK.
-Lijo Willams is a Male aged 28 and received these scores: 6, 2, 5, 8.
-This gives them an overall score of 5.25.
---------------------------------------------
-
-Competitor with the highest overall score:
-Competitor Number 111, Name: Jomon Vicy, Country: UK.
-Jomon Vicy is a Male aged 22 and received these scores: 6, 9, 10, 9.
-This gives them an overall score of 8.5.
-
-Summary Statistics:
-Total Overall Score: 102.25
-Average Overall Score: 5.1125
-Minimum Overall Score: 2.75
-Maximum Overall Score: 8.5
-
-Frequency Report for Individual Scores:
-Score 1: 4 times
-Score 2: 14 times
-Score 3: 4 times
-Score 4: 10 times
-Score 5: 13 times
-Score 6: 13 times
-Score 7: 7 times
-Score 8: 4 times
-Score 9: 9 times
-Score 10: 2 times
-
-Short Details for Competitor 119:
-CN 119 (LW) has overall score 5.25.
+Competitor Number    Name                 Country              Overall Score        Extra Information
+100                  Ann Sthen            UK                   12.00                Dance Style: Hip Hop | Years of Experience: 5
+101                  George Beth          UK                   16.00                Dance Style: Hip Hop | Years of Experience: 2
+102                  Kaith Andy           UK                   11.00                Dance Style: Hip Hop | Years of Experience: 4
+103                  Rinon Grov           US                   13.00                Dance Style: Hip Hop | Years of Experience: 1
+104                  Mark Do              UK                   13.00                Dance Style: Salsa | Years of Experience: 5
+105                  Harry Patrick        UK                   19.00                Dance Style: Salsa | Years of Experience: 2
+106                  Vicy Mathew          UK                   16.00                Dance Style: Salsa | Years of Experience: 6
+107                  Monica Loy           US                   14.00                Dance Style: Jazz | Years of Experience: 4
+108                  Susan Mathew         US                   14.00                Dance Style: Jazz | Years of Experience: 5
+109                  Andy Stov            US                   17.00                Dance Style: Classical | Years of Experience: 6
+110                  Mary Francis         UK                   21.00                Dance Style: Classical | Years of Experience: 7
+111                  Jomon Vicy           UK                   28.00                Dance Style: Classical | Years of Experience: 6
+112                  Catherin George      UAE                  10.00                Dance Style: Classical | Years of Experience: 1
+113                  Aby Mathew           UK                   14.00                Dance Style: Classical | Years of Experience: 2
+114                  Jojo Mony            UK                   16.00                Dance Style: Stuff | Years of Experience: 2
+115                  Methen George        UK                   22.00                Dance Style: Stuff | Years of Experience: 4
+116                  Scarlett John        UK                   15.00                Dance Style: Stuff | Years of Experience: 3
+117                  Patrick Shanon       US                   28.00                Dance Style: Salsa | Years of Experience: 4
+118                  Rod Stod             UK                   15.00                Dance Style: Salsa | Years of Experience: 5
+119                  Lijo Willams         UK                   15.00                Dance Style: Salsa | Years of Experience: 6
+200                  Junaid Mirza         UK                   22.10                Skating Style: SINGLES | Skill Level: 10
+201                  George Beth          UK                   22.50                Skating Style: DANCE | Skill Level: 9
+202                  Kaith Andy           UK                   18.00                Skating Style: SYNCHRONIZED | Skill Level: 8
+203                  Rinon Grov           US                   16.80                Skating Style: SYNCHRONIZED | Skill Level: 7
+204                  Mark Do              UK                   19.80                Skating Style: SINGLES | Skill Level: 6
+205                  Harry Patrick        UK                   23.10                Skating Style: SINGLES | Skill Level: 5
+206                  Vicy Mathew          UK                   24.20                Skating Style: DANCE | Skill Level: 4
+207                  Monica Loy           US                   19.80                Skating Style: DANCE | Skill Level: 4
+208                  Susan Mathew         US                   20.90                Skating Style: DANCE | Skill Level: 4
+209                  Andy Stov            US                   23.00                Skating Style: SYNCHRONIZED | Skill Level: 3
+210                  Mary Francis         UK                   28.00                Skating Style: SYNCHRONIZED | Skill Level: 2
+211                  Jomon Vicy           UK                   34.00                Skating Style: DANCE | Skill Level: 1
+212                  Catherin George      UAE                  11.00                Skating Style: SYNCHRONIZED | Skill Level: 1
+213                  Aby Mathew           UK                   16.00                Skating Style: SYNCHRONIZED | Skill Level: 1
+214                  Jojo Mony            UK                   19.80                Skating Style: DANCE | Skill Level: 5
+215                  Methen George        UK                   28.60                Skating Style: SINGLES | Skill Level: 6
+216                  Scarlett John        UK                   23.40                Skating Style: SINGLES | Skill Level: 10
+217                  Patrick Shanon       US                   35.20                Skating Style: SYNCHRONIZED | Skill Level: 5
+218                  Rod Stod             UK                   26.00                Skating Style: SINGLES | Skill Level: 10
+219                  Lijo Willams         UK                   26.25                Skating Style: SYNCHRONIZED | Skill Level: 9

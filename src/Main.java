@@ -10,9 +10,9 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Manager manager = new Manager();
-        String filePath = "src/RunCompetitor.csv"; // Replace this with the path to your CSV file
+        String filePath = "src/DancerCompetitor.csv";
 
-        ArrayList<Competitor> competitors = manager.readCompetitorData(filePath);
+        ArrayList<Competitor> competitors = manager.readCompetitorData(filePath, "Dancer");
 
         CompetitorList competitorList = new CompetitorList();
         competitorList.getCompetitors().addAll(competitors);
@@ -38,10 +38,10 @@ public class Main {
             // Summary statistics
             writer.write("\nSummary Statistics:\n");
             SummaryStatistics summaryStats = competitorList.calculateSummaryStatistics();
-            writer.write("Total Overall Score: " + summaryStats.getTotalOverallScore() + "\n");
-            writer.write("Average Overall Score: " + summaryStats.getAverageOverallScore() + "\n");
-            writer.write("Minimum Overall Score: " + summaryStats.getMinOverallScore() + "\n");
-            writer.write("Maximum Overall Score: " + summaryStats.getMaxOverallScore() + "\n");
+            writer.write("Total Overall Score: " + summaryStats.totalOverallScore() + "\n");
+            writer.write("Average Overall Score: " + summaryStats.averageOverallScore() + "\n");
+            writer.write("Minimum Overall Score: " + summaryStats.minOverallScore() + "\n");
+            writer.write("Maximum Overall Score: " + summaryStats.maxOverallScore() + "\n");
 
             // Frequency report for individual scores
             writer.write("\nFrequency Report for Individual Scores:\n");
